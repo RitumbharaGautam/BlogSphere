@@ -1,0 +1,26 @@
+<%- include('header.ejs') %>
+<section class="py-5" style="background-color: #8EACCD;  " >
+    <div class="container px-5">
+        <!-- Contact form-->
+        <div class=" rounded-3 py-5 px-4 px-md-5 mb-5" style="background-color:#FEF9D9;">
+            <div class="text-center mb-5">
+                <div class="feature bg-gradient rounded-3 mb-3" style="background-color: #8EACCD;"><i class="bi bi-envelope"></i></div>
+                <h1 class="fw-bolder">Edit Blog</h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+    <form  action="/posts/change/<%= post.id %>" method="POST">
+        
+        <label for="title"><b>Title</b></label>
+        <input type="text" class="form-control mb-3" id="title" name="title" value="<%= post.title %>" required>
+    
+        <label for="content"><b>Content</b></label>
+        <textarea class="form-control mb-3" id="content" name="content" rows="5" required><%= post.content %></textarea>
+        <div class="d-grid">
+        <button class="btn btn-lg" type="submit" style="background-color:#8EACCD;">Save Changes</button></div>
+    </form>
+    </div>
+    </div>
+    </div>
+</section>
+<%- include('footer.ejs') %>

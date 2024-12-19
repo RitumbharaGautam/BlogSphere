@@ -1,0 +1,45 @@
+<%- include('header.ejs') %>
+
+<section class="py-5" style="background-color: #8EACCD;  " >
+    <div class="container px-5">
+        <!-- Contact form-->
+        <div class=" rounded-3 py-5 px-4 px-md-5 mb-5" style="background-color:#FEF9D9;">
+            <div class="text-center mb-5">
+                <div class="feature bg-gradient text-white rounded-3 mb-3" style="background-color: #8EACCD;"><i class="bi bi-envelope"></i></div>
+                <h1 class="fw-bolder">Write your Blog</h1>
+                <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/posts" method="POST">
+                        <!-- Title input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="Enter your Title..." data-sb-validations="required" />
+                            <label for="title">Title</label>
+                            <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
+                        </div>
+            
+                        <!-- content input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="content" type="text" name="content" placeholder="blog..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="content">Blog</label>
+                            <div class="invalid-feedback" data-sb-feedback="content:required">A blog is required.</div>
+                        </div>
+                        
+                        <div class="d-grid"><button class="btn btn-lg" id="submitButton" type="submit" style="background-color:#8EACCD;">Post</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<%- include('footer.ejs') %>

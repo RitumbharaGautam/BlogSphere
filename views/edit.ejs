@@ -1,0 +1,17 @@
+<%- include('header.ejs') %>
+<section class="py-5" style="background-color: #8EACCD;  " >
+    <div class="container px-5">
+        <!-- Contact form-->
+        <div class=" rounded-3 py-5 px-4 px-md-5 mb-5" style="background-color:#FEF9D9;">
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder"><%= post.title %></h1>
+                <p class="lead fw-normal text-muted mb-0"><%= post.content %></p>
+                <a href="/posts/change/<%= post.id %>" class="btn btn-lg px-3 feature bg-gradient  rounded-3 m-5 me-sm-3 shadow" style="background-color: #8EACCD;" ><i class="bi bi-pencil-square"></i></a>
+                <form action="/posts/delete/<%= post.id %>" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-lg px-3 feature bg-gradient  rounded-3 m-5 me-sm-3 shadow" style="background-color: #8EACCD;" ><i class="bi bi-trash"></i></button>
+                </form>
+            </div>
+            </div>
+            </div>
+            </section>
+<%- include('footer.ejs') %>
